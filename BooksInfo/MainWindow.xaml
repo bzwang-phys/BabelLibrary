@@ -1,0 +1,17 @@
+﻿<Window x:Class="BooksInfo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BooksInfo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="790">
+        <Button Content="Time" HorizontalAlignment="Left" Height="54" Margin="505,30,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="193" Margin="114,159,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="570" RenderTransformOrigin="-0.876,1.541"/>
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="10,49,0,0" TextWrapping="Wrap" Text="豆瓣网址：" VerticalAlignment="Top" Width="99"/>
+        <TextBox x:Name="douBanUri" HorizontalAlignment="Left" Height="25" Margin="84,48,0,0" TextWrapping="Wrap" Text="请填入豆瓣网址" VerticalAlignment="Top" Width="375" RenderTransformOrigin="0.495,0.584"/>
+
+    </Grid>
+
+</Window>
