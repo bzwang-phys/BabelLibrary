@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" onDragDropped="#dragFilesDropped" prefHeight="650.0" prefWidth="818.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BooksClassify.MainController">
+   <children>
+      <Pane onDragDropped="#dragFilesDropped" onDragOver="#dragFilesOver" prefHeight="653.0" prefWidth="818.0" style="-fx-background-color: lightblue;">
+         <children>
+            <Label layoutX="17.0" layoutY="119.0" prefHeight="24.0" prefWidth="61.0" text="书籍路径:">
+               <font>
+                  <Font name="Yu Gothic Medium" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textBookPath" layoutX="78.0" layoutY="119.0" minHeight="0.0" onDragDropped="#dragFilesDropped" prefHeight="25.0" prefWidth="546.0" promptText="将书籍拖入窗口，或者手动添加书籍路径" />
+            <Button fx:id="buttonDoubanSearch" layoutX="659.0" layoutY="119.0" mnemonicParsing="false" onAction="#doubanSearch" prefHeight="23.0" prefWidth="142.0" text="豆瓣搜索">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="17.0" layoutY="163.0" prefHeight="24.0" prefWidth="61.0" text="豆瓣网址:">
+               <font>
+                  <Font name="Yu Gothic Medium" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textDoubanUrl" layoutX="78.0" layoutY="163.0" minHeight="0.0" onDragDropped="#dragFilesDropped" prefHeight="25.0" prefWidth="546.0" promptText="可以自己填入，也可以用上述按钮搜索" />
+            <Line endX="700.3999633789062" layoutX="116.0" layoutY="211.0" startX="-118.0" />
+            <Button fx:id="buttonGetBookInfo" layoutX="659.0" layoutY="163.0" mnemonicParsing="false" onAction="#getBookInfo" prefHeight="23.0" prefWidth="142.0" text="获取书籍信息">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f40" height="40.0" layoutX="-2.0" layoutY="211.0" opacity="0.38" stroke="BLACK" width="103.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <DisplacementMap>
+                           <mapData>
+                              <FloatMap />
+                           </mapData>
+                        </DisplacementMap>
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></Rectangle>
+            <Label layoutX="8.0" layoutY="218.0" text="书籍信息" textFill="#b20808">
+               <font>
+                  <Font name="Wingdings 3" size="20.0" />
+               </font>
+            </Label>
+
+            <Label layoutX="306.0" layoutY="223.0" prefHeight="24.0" prefWidth="37.0" text="书名:">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="title" layoutX="357.0" layoutY="221.0" onDragDropped="#dragFilesDropped" prefHeight="28.0" prefWidth="269.0" />
+
+            <Label layoutX="26.0" layoutY="460.0" prefHeight="24.0" prefWidth="37.0" text="页数:">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pages" layoutX="78.0" layoutY="458.0" prefHeight="28.0" prefWidth="269.0" />
+
+            <Label layoutX="11.0" layoutY="398.0" prefHeight="24.0" prefWidth="69.0" text="出版年:">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="year" layoutX="78.0" layoutY="398.0" prefHeight="28.0" prefWidth="269.0" />
+
+            <Label layoutX="11.0" layoutY="338.0" prefHeight="24.0" prefWidth="61.0" text="出版社:">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="publisher" layoutX="78.0" layoutY="338.0" onDragDropped="#dragFilesDropped" prefHeight="28.0" prefWidth="269.0" />
+
+            <Label layoutX="27.0" layoutY="280.0" prefHeight="24.0" prefWidth="45.0" text="作者:" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="author" layoutX="78.0" layoutY="278.0" onDragDropped="#dragFilesDropped" prefHeight="28.0" prefWidth="269.0" />
+            <Label layoutX="26.0" layoutY="520.0" prefHeight="24.0" prefWidth="45.0" text="ISBN:">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="isbn" layoutX="78.0" layoutY="518.0" prefHeight="28.0" prefWidth="269.0" />
+            <Label layoutX="458.0" layoutY="278.0" prefHeight="24.0" prefWidth="37.0" text="格式:">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="format" layoutX="518.0" layoutY="278.0" onDragDropped="#dragFilesDropped" prefHeight="28.0" prefWidth="269.0" />
+            <Label layoutX="458.0" layoutY="398.0" prefHeight="24.0" prefWidth="37.0" text="备注:">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="remark" layoutX="518.0" layoutY="398.0" prefHeight="41.0" prefWidth="269.0" wrapText="true" />
+            <Label layoutX="458.0" layoutY="338.0" prefHeight="24.0" prefWidth="37.0" text="分类:">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f40" height="40.0" layoutX="-2.0" layoutY="61.0" opacity="0.38" stroke="BLACK" width="103.0">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <DisplacementMap>
+                           <mapData>
+                              <FloatMap />
+                           </mapData>
+                        </DisplacementMap>
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Rectangle>
+            <Label layoutX="6.0" layoutY="68.0" text="书籍搜索" textFill="#b20808">
+               <font>
+                  <Font name="Wingdings 3" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonClassify" layoutX="518.0" layoutY="534.0" mnemonicParsing="false" onAction="#classifySave" prefHeight="64.0" prefWidth="269.0" text="分类书籍" textAlignment="JUSTIFY" textFill="#0e35cf" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Segoe UI Semibold" size="31.0" />
+               </font>
+            </Button>
+            <TextField fx:id="classify" layoutX="518.0" layoutY="338.0" onDragDropped="#dragFilesDropped" prefHeight="28.0" prefWidth="269.0" />
+            <Label layoutX="26.0" layoutY="578.0" prefHeight="24.0" prefWidth="45.0" text="丛书:">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="series" layoutX="78.0" layoutY="578.0" prefHeight="28.0" prefWidth="269.0" />
+            <Label layoutX="442.0" layoutY="458.0" prefHeight="24.0" prefWidth="53.0" text="文件名:">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="filename" layoutX="518.0" layoutY="458.0" prefHeight="48.0" prefWidth="269.0" wrapText="true" />
+            <Button fx:id="buttonHome" mnemonicParsing="false" prefHeight="25.0" prefWidth="186.0" stylesheets="@./ipad-dark-gray.css" text="图书馆主页">
+               <font>
+                  <Font name="STKaiti" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonClassification" layoutX="186.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="157.0" stylesheets="@./ipad-dark-gray.css" text="书籍分类">
+               <font>
+                  <Font name="STXihei" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonModify" layoutX="343.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="165.0" stylesheets="@./ipad-dark-gray.css" text="书籍修改">
+               <font>
+                  <Font name="STFangsong" size="18.0" />
+               </font></Button>
+            <Line endX="810.3999633789062" endY="5.0" layoutX="7.0" layoutY="55.0" startX="-10.0" startY="5.0" stroke="#e30b3b" />
+            <Button fx:id="buttonClear3" layoutX="357.0" layoutY="339.0" mnemonicParsing="false" onAction="#clear3" prefHeight="145.0" prefWidth="19.0" style="-fx-background-color: #505078;" text="清理" textAlignment="JUSTIFY" textFill="#1e0de0" wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <CheckBox layoutX="691.0" layoutY="227.0" mnemonicParsing="false" text="封面" />
+
+         </children></Pane>
+
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

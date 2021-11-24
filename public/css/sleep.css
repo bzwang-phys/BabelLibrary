@@ -1,0 +1,11 @@
+.search-column {
+	width: 100%;
+	padding: 10px 30px;
+	float: left;
+}
+
+#fig {
+    max-width: 800px;
+    height: 400px;
+    background-color: thistle;
+}

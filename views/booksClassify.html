@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>BabelLibrary 书籍分类</title>
+		<link rel="stylesheet" type="text/css" href="/public/css/booksClassify.css" />
+		<link rel="stylesheet" type="text/css" href="/public/css/booksClassifyComponent.css" />
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="/public/js/jquery-3.6.js"></script>
+<!--		<script src="../public/js/modernizr.custom.js"></script>-->
+		<script src="/public/js/booksClassify.js"></script>
+		
+	</head>
+	<body>
+		<div class="container">
+			<header class="clearfix">
+				<h1>书籍归档</h1>
+			</header>	
+			
+		<HR align=center width=device-width color=#981010 SIZE=1.9>
+			<form id="douban" class="cbp-mc-form" method="post" >
+			<div class="search-column">
+				<label for="">书籍路径</label>
+				<input type="text" id="bookPath"  name="bookPath" placeholder="拖动书籍到此处">
+				<input class="search-submit" type="button" id="openDouban" value="豆瓣搜索" />
+				<br>
+				<br>
+				<label for="">豆瓣网址</label>
+				<input type="text" id="doubanUrl" name="doubanUrl" placeholder="可以自己填入，也可以自动获取">
+				<input class="search-submit" type="button" id="getDouban" value="获取书籍信息" />
+			</div>
+			</form>
+				
+	<HR align=center width=device-width color=#981010 SIZE=1.9>
+		<div class="main">
+			<form class="cbp-mc-form" method="post" action="/booksClassify">
+				<div class="cbp-mc-column">
+					<label for="">书名</label>
+					<input type="text" id="title" name="title" placeholder=""><br>
+					<label for="country">格式</label>
+					<input type="text" id="format" name="format" placeholder=""><br>
+					<label for="">作者</label>
+					<input type="text" id="author" name="author" placeholder=""><br>
+					<label for="email">出版社</label>
+					<input type="text" id="publisher" name="publisher" placeholder=""><br>
+					<label for="country">出版年</label>
+					<input type="text" id="year" name="year" placeholder=""><br>
+					<label for="country">页数</label>
+					<input type="text" id="pages" name="pages" placeholder=""><br>
+				</div>
+				<div class="cbp-mc-column">
+					<label for="country">ISBN</label>
+					<input type="text" id="isbn" name="isbn" placeholder=""><br>
+					<label for="country">分类</label>
+					<input type="text" id="classify" name="classify" placeholder=""><br>
+					<label for="country">文件名</label>
+					<input type="text" id="filename" name="filename" placeholder=""><br>
+					<br>
+					<label for="remark">备注</label>
+					<textarea id="remark" name="remark"></textarea>
+<!--
+					<label>Occupation</label>
+					<select id="occupation" name="occupation">
+						<option>Choose an occupation</option>
+						<option>Web Designer</option>
+						<option>Web Developer</option>
+						<option>Hybrid</option>
+					</select>
+-->
+				</div>
+	  				<div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit" type="submit" style="float:none;width=200px" value="书籍归档" /></div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
